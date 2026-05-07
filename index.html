@@ -29,6 +29,12 @@
     }
     .custom-cursor img { width:100%; height:100%; object-fit:contain; }
 
+    /* Все фоны вынесены в CSS — загружаются сразу при старте страницы */
+    #scene1 { background-image: url('ProjectGame/assets/corridor.jpg'); }
+    #scene2 { background-image: url('ProjectGame/assets/room.jpg'); }
+    #scene3 { background-image: url('ProjectGame/assets/table_close.jpg'); }
+    #scene4 { background-image: url('ProjectGame/assets/drawer_open.jpg'); }
+
     .scene { 
       position: absolute; inset: 0; 
       background-size: cover; background-position: center; 
@@ -229,8 +235,16 @@
 
 <div class="custom-cursor" id="customCursor"><img src="ProjectGame/assets/lupa.png" alt="cursor"></div>
 
+<!-- Скрытая предзагрузка всех фоновых изображений (моментальные переходы) -->
+<div style="display:none;">
+  <img src="ProjectGame/assets/corridor.jpg">
+  <img src="ProjectGame/assets/room.jpg">
+  <img src="ProjectGame/assets/table_close.jpg">
+  <img src="ProjectGame/assets/drawer_open.jpg">
+</div>
+
 <!-- Сцена 1: Коридор -->
-<div id="scene1" class="scene active" style="background-image: url('ProjectGame/assets/corridor.jpg')">
+<div id="scene1" class="scene active">
   <div class="hotspot" style="left: 52.7%; top: 35.9%; width: 12.3%; height: 57.6%;" 
        onmouseenter="showTooltip('ВОЙТИ В КОМНАТУ', event)" 
        onmouseleave="hideTooltip()" 
@@ -239,7 +253,7 @@
 </div>
 
 <!-- Сцена 2: Комната -->
-<div id="scene2" class="scene" style="background-image: url('ProjectGame/assets/room.jpg')">
+<div id="scene2" class="scene">
   <div class="cinema-text">НАЙДИТЕ УЛИКУ В ЭТОМ КАБИНЕТЕ</div>
   
   <div class="hotspot" style="left: 14.9%; top: 14.2%; width: 8.7%; height: 15.4%;" 
@@ -264,7 +278,7 @@
 </div>
 
 <!-- Сцена 3: Стол крупно -->
-<div id="scene3" class="scene" style="background-image: url('ProjectGame/assets/table_close.jpg')">
+<div id="scene3" class="scene">
   <div class="hotspot" style="left: 2.1%; top: 45.3%; width: 25.8%; height: 13.9%;" 
        onmouseenter="showTooltip('ПАПКА С НЕИЗВЕСТНЫМИ ДОКУМЕНТАМИ', event)" 
        onmouseleave="hideTooltip()" 
@@ -284,8 +298,8 @@
   <div class="cinema-text">ОСМОТРИТЕ СТОЛ ВНИМАТЕЛЬНЕЕ</div>
 </div>
 
-<!-- Сцена 4: Открытый ящик с фотографией (хотспот уменьшен и смещён) -->
-<div id="scene4" class="scene" style="background-image: url('ProjectGame/assets/drawer_open.jpg')">
+<!-- Сцена 4: Открытый ящик с фотографией -->
+<div id="scene4" class="scene">
   <div class="hotspot" style="left: 41%; top: 58%; width: 21%; height: 21%;" 
        onmouseenter="showTooltip('СТАРАЯ ФОТОГРАФИЯ', event)" 
        onmouseleave="hideTooltip()" 
