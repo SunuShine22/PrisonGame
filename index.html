@@ -227,10 +227,10 @@
 </head>
 <body>
 
-<div class="custom-cursor" id="customCursor"><img src="assets/lupa.png" alt="cursor"></div>
+<div class="custom-cursor" id="customCursor"><img src="ProjectGame/assets/lupa.png" alt="cursor"></div>
 
 <!-- Сцена 1: Коридор -->
-<div id="scene1" class="scene active" style="background-image: url('assets/corridor.jpg')">
+<div id="scene1" class="scene active" style="background-image: url('ProjectGame/assets/corridor.jpg')">
   <div class="hotspot" style="left: 52.7%; top: 35.9%; width: 12.3%; height: 57.6%;" 
        onmouseenter="showTooltip('ВОЙТИ В КОМНАТУ', event)" 
        onmouseleave="hideTooltip()" 
@@ -239,7 +239,7 @@
 </div>
 
 <!-- Сцена 2: Комната -->
-<div id="scene2" class="scene" style="background-image: url('assets/room.jpg')">
+<div id="scene2" class="scene" style="background-image: url('ProjectGame/assets/room.jpg')">
   <div class="cinema-text">НАЙДИТЕ УЛИКУ В ЭТОМ КАБИНЕТЕ</div>
   
   <div class="hotspot" style="left: 14.9%; top: 14.2%; width: 8.7%; height: 15.4%;" 
@@ -264,7 +264,7 @@
 </div>
 
 <!-- Сцена 3: Стол крупно -->
-<div id="scene3" class="scene" style="background-image: url('assets/table_close.jpg')">
+<div id="scene3" class="scene" style="background-image: url('ProjectGame/assets/table_close.jpg')">
   <div class="hotspot" style="left: 2.1%; top: 45.3%; width: 25.8%; height: 13.9%;" 
        onmouseenter="showTooltip('ПАПКА С НЕИЗВЕСТНЫМИ ДОКУМЕНТАМИ', event)" 
        onmouseleave="hideTooltip()" 
@@ -285,7 +285,7 @@
 </div>
 
 <!-- Сцена 4: Открытый ящик с фотографией (хотспот уменьшен и смещён) -->
-<div id="scene4" class="scene" style="background-image: url('assets/drawer_open.jpg')">
+<div id="scene4" class="scene" style="background-image: url('ProjectGame/assets/drawer_open.jpg')">
   <div class="hotspot" style="left: 41%; top: 58%; width: 21%; height: 21%;" 
        onmouseenter="showTooltip('СТАРАЯ ФОТОГРАФИЯ', event)" 
        onmouseleave="hideTooltip()" 
@@ -377,7 +377,7 @@
   const pieces = [];
   for (let i = 1; i <= 9; i++) {
     const img = new Image();
-    img.src = `assets/puzzle_pieces/piece${i}.jpg`;
+    img.src = `ProjectGame/assets/puzzle_pieces/piece${i}.jpg`;
     pieces.push(img);
   }
 
